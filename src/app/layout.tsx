@@ -4,7 +4,6 @@ import "../css/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Theme from "@/theme";
-import { KumaRegistry } from "@kuma-ui/next-plugin/registry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,14 +20,12 @@ const RootLayout = (props: Props) => {
   const { children } = props;
 
   return (
-    <KumaRegistry>
-      <html lang="en">
-        <body className={inter.className}>
-          {children}
-          <Theme.setup />
-        </body>
-      </html>
-    </KumaRegistry>
+    <html suppressHydrationWarning lang="en">
+      <body className={inter.className}>
+        {children}
+        <Theme.setup />
+      </body>
+    </html>
   );
 };
 
