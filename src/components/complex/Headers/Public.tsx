@@ -1,4 +1,5 @@
 import AtomButton from "@/components/atoms/AtomButton";
+import AtomInput from "@/components/atoms/AtomInput";
 import AtomWrapper from "@/components/atoms/AtomWrapper";
 import { css } from "@kuma-ui/core";
 import Image from "next/image";
@@ -10,7 +11,7 @@ const HeaderPublic = () => {
       css={css`
         width: 100%;
         min-height: 60px;
-        background-color: var(--background-header);
+        background-color: var(--background-light);
         border-bottom: var(--border);
         box-shadow: var(--box-shadow);
         position: sticky;
@@ -29,12 +30,20 @@ const HeaderPublic = () => {
         priority
         src="/images/logo.svg"
       />
-      <AtomWrapper>2</AtomWrapper>
+      <AtomWrapper
+        css={css`
+          justify-content: center;
+          align-items: center;
+        `}
+      >
+        <AtomInput placeholder="Buscar productos" />
+      </AtomWrapper>
       <AtomWrapper
         css={css`
           display: flex;
           flex-direction: row;
           gap: 1rem;
+          justify-content: flex-end;
         `}
       >
         <AtomButton>Ingresar</AtomButton>

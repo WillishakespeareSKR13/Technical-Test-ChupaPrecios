@@ -6,7 +6,7 @@ export const cssButton = css`
   width: max-content;
   height: max-content;
   padding: 8px 22px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   font-size: 12px;
   line-height: 16px;
   text-align: center;
