@@ -1,5 +1,5 @@
-const ProductCard = () => {
-  return <div>ProductCard</div>;
+const CardProduct = () => {
+  return <div>CardProduct</div>;
 };
 
-export default ProductCard;
+export default CardProduct;
