@@ -1,4 +1,4 @@
-import { AtomWrapperProps } from "./types";
+import { AsEnum, AtomWrapperProps } from "./types";
 import { stylesWrapper } from "./css";
 
 const getWrapper = (props: AtomWrapperProps) => {
@@ -11,7 +11,8 @@ const getWrapper = (props: AtomWrapperProps) => {
     header: <header {...props} />,
     footer: <footer {...props} />,
     aside: <aside {...props} />,
-  };
+    nav: <nav {...props} />,
+  } as Record<AsEnum, JSX.Element>;
   return wrappers[as];
 };
 

@@ -10,7 +10,7 @@ export const cssWrapper = css`
 `;
 
 export const stylesWrapper = (props: AtomWrapperProps) => {
-  const { className } = props;
-  const classes = cx([cssWrapper, className]);
+  const { className, css } = props;
+  const classes = cx([cssWrapper, className, css]);
   return classes;
 };
