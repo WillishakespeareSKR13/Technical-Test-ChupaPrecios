@@ -3,10 +3,11 @@ import AtomWrapper from "@/components/atoms/AtomWrapper";
 import { css } from "@kuma-ui/core";
 import Image from "next/image";
 import InputSearchProduct from "../Inputs/SearchProduct";
+import AtomElement from "@/components/atoms/AtomElement";
 
 const HeaderPublic = () => {
   return (
-    <AtomWrapper
+    <AtomElement
       as="nav"
       css={css`
         width: 100%;
@@ -49,7 +50,7 @@ const HeaderPublic = () => {
         <AtomButton>Ingresar</AtomButton>
         <AtomButton astype="outline">Iniciar Sesión</AtomButton>
       </AtomWrapper>
-    </AtomWrapper>
+    </AtomElement>
   );
 };
 
