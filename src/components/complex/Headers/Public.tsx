@@ -1,8 +1,8 @@
 import AtomButton from "@/components/atoms/AtomButton";
-import AtomInput from "@/components/atoms/AtomInput";
 import AtomWrapper from "@/components/atoms/AtomWrapper";
 import { css } from "@kuma-ui/core";
 import Image from "next/image";
+import InputSearchProduct from "../Inputs/SearchProduct";
 
 const HeaderPublic = () => {
   return (
@@ -36,7 +36,7 @@ const HeaderPublic = () => {
           align-items: center;
         `}
       >
-        <AtomInput placeholder="Buscar productos" />
+        <InputSearchProduct />
       </AtomWrapper>
       <AtomWrapper
         css={css`
