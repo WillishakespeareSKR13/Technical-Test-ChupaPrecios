@@ -17,11 +17,11 @@ const LayoutHome = (props: Props) => {
     <>
       <HeaderPublic />
       <AtomElement
-        {...wrapper}
         as="main"
         css={css`
           min-height: 100vh;
         `}
+        {...wrapper}
       >
         {children}
       </AtomElement>
