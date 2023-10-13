@@ -5,7 +5,7 @@ type Button = DetailedHTMLProps<
   HTMLButtonElement
 >;
 
-export type AtomButtonProps = Button & {
+export type AtomButtonProps = Omit<Button, "ref"> & {
   astype?: "solid" | "outline";
   css?: string;
 };
