@@ -1,5 +1,5 @@
-const PublicHeader = () => {
-  return <div>PublicHeader</div>;
+const HeaderPublic = () => {
+  return <div>HeaderPublic</div>;
 };
 
-export default PublicHeader;
+export default HeaderPublic;
