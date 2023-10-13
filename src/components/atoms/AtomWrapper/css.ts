@@ -6,7 +6,7 @@ export const cssWrapper = css`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: max-content;
 `;
 
 export const stylesWrapper = (props: AtomWrapperProps) => {
