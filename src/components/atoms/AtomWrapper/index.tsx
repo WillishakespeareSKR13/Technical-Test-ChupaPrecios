@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { AsEnum, AtomWrapperProps } from "./types";
 import { stylesWrapper } from "./css";
 
@@ -16,11 +17,14 @@ const getWrapper = (props: AtomWrapperProps) => {
   return wrappers[as];
 };
 
-const AtomWrapper = (props: AtomWrapperProps) => {
-  const styles = stylesWrapper(props);
-  const wrapper = getWrapper({ ...props, className: styles });
+const AtomWrapper = forwardRef<HTMLDivElement, AtomWrapperProps>(
+  (props, ref) => {
+    const styles = stylesWrapper(props);
+    const wrapper = getWrapper({ ...props, className: styles, ref });
+    return wrapper;
+  }
+);
 
-  return wrapper;
-};
+AtomWrapper.displayName = "AtomWrapper";
 
 export default AtomWrapper;
