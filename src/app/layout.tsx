@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import "../css/vars.css";
 import "../css/globals.css";
+import "../css/animations.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Theme from "@/theme";
