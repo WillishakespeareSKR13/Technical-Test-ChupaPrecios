@@ -1,0 +1,13 @@
+:root {
+  --background: #ffffff;
+
+  --button-background: #ffffff;
+}
+
+:root [data-theme="dark"] {
+  --background: #000000;
+}
+
+html {
+  background: var(--background);
+}
