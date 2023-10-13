@@ -5,22 +5,23 @@ import { AtomButtonProps } from "./types";
 export const cssButton = css`
   width: max-content;
   height: max-content;
-  padding: 0.4rem 1rem;
-  border-radius: 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.5;
+  padding: 8px 22px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 16px;
   text-align: center;
   cursor: pointer;
 `;
 
 const cssButonSolid = css`
+  font-weight: 600;
   background-color: var(--color-primary);
   color: var(--text-color-light);
   border: 1px solid var(--color-primary);
 `;
 
 const cssButonOutline = css`
+  font-weight: 600;
   background-color: transparent;
   color: var(--color-primary);
   border: 1px solid var(--color-primary);
