@@ -1,10 +1,10 @@
 import AtomButton from "@/components/atoms/AtomButton";
+import LayoutHome from "@/components/layouts/Home";
 
 const Home = () => (
-  <main>
-    <h1>Home</h1>
+  <LayoutHome>
     <AtomButton>This is a button</AtomButton>
-  </main>
+  </LayoutHome>
 );
 
 export default Home;
