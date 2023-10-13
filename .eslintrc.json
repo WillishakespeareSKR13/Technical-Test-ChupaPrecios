@@ -4,6 +4,8 @@
     "react-hooks/exhaustive-deps": "off",
     "no-unused-vars": "error",
     "@next/next/no-img-element": "off",
-    "@next/next/no-before-interactive-script-outside-document": "off"
+    "@next/next/no-before-interactive-script-outside-document": "off",
+    "@next/next/no-sync-scripts": "off",
+    "@next/next/no-css-tags": "off"
   }
 }
