@@ -4,6 +4,7 @@ import { AtomButtonProps } from "./types";
 
 export const cssButton = css`
   width: max-content;
+  height: max-content;
   padding: 0.4rem 1rem;
   border-radius: 0.25rem;
   font-size: 0.875rem;
