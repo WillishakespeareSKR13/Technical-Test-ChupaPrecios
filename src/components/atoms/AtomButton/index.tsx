@@ -1,11 +1,13 @@
-import { cx } from "@/utils/css";
 import { AtomButtonProps } from "./types";
-import { cssButton } from "./css";
+import { stylesButton } from "./css";
 
 const AtomButton = (props: AtomButtonProps) => {
-  const { children, className } = props;
+  const { children } = props;
+
+  const styles = stylesButton(props);
+
   return (
-    <button {...props} className={cx([cssButton, className])}>
+    <button {...props} className={styles}>
       {children}
     </button>
   );
