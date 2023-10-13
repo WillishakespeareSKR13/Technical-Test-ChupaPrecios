@@ -1,4 +1,9 @@
-type Wrapper = React.HTMLAttributes<HTMLDivElement>;
+import type { DetailedHTMLProps, HTMLAttributes } from "react";
+
+type Wrapper = DetailedHTMLProps<
+  HTMLAttributes<HTMLDivElement | HTMLElement>,
+  HTMLDivElement | HTMLElement
+>;
 
 export type AsEnum =
   | "div"

@@ -4,7 +4,7 @@ import { stylesWrapper } from "./css";
 const getWrapper = (props: AtomWrapperProps) => {
   const { as = "div" } = props;
   const wrappers = {
-    div: <div {...props} />,
+    div: <div {...(props as any)} />,
     section: <section {...props} />,
     article: <article {...props} />,
     main: <main {...props} />,
