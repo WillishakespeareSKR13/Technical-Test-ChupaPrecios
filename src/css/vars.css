@@ -12,6 +12,10 @@
   --color-accent-dark: #c78300;
 
   --background: #f0f2f5;
+  --background-header: #ffffff;
+  --border-color: #e5e6eb;
+  --border: 1px solid var(--border-color);
+  --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
   --text-color: #000000;
   --text-color-light: #ffffff;
   --text-color-dark: #000000;
