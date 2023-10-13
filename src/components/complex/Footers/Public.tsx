@@ -1,5 +1,5 @@
-const PublicFooter = () => {
-  return <div>PublicFooter</div>;
+const FooterPublic = () => {
+  return <div>FooterPublic</div>;
 };
 
-export default PublicFooter;
+export default FooterPublic;
