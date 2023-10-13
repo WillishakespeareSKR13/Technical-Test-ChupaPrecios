@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
-import { AsEnum, AtomElementProps } from "./types";
+import { AsEnumElement, AtomElementProps, IGetElement } from "./types";
 import { stylesElement } from "./css";
 
-const getElement = (props: AtomElementProps) => {
+const getElement = (props: IGetElement) => {
   const { as = "section" } = props;
   const Elements = {
     section: <section {...props} />,
@@ -12,7 +12,7 @@ const getElement = (props: AtomElementProps) => {
     footer: <footer {...props} />,
     aside: <aside {...props} />,
     nav: <nav {...props} />,
-  } as Record<AsEnum, JSX.Element>;
+  } as Record<AsEnumElement, JSX.Element>;
   return Elements[as];
 };
 

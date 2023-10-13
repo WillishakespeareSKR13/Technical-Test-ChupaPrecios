@@ -1,8 +1,8 @@
-import type { DetailedHTMLProps, HTMLAttributes } from "react";
+import type { DetailedHTMLProps, HTMLAttributes, ForwardedRef } from "react";
 
 type Element = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 
-export type AsEnum =
+export type AsEnumElement =
   | "div"
   | "section"
   | "article"
@@ -13,6 +13,10 @@ export type AsEnum =
   | "nav";
 
 export type AtomElementProps = Omit<Element, "ref"> & {
-  as?: AsEnum;
+  as?: AsEnumElement;
   css?: string;
+};
+
+export type IGetElement = AtomElementProps & {
+  ref?: ForwardedRef<HTMLElement>;
 };
