@@ -1,7 +1,20 @@
 :root {
-  --background: #ffffff;
+  --color-primary: #134074;
+  --color-primary-light: #1b5e9e;
+  --color-primary-dark: #0c2c4b;
 
-  --button-background: #ffffff;
+  --color-secondary: #eef4ed;
+  --color-secondary-light: #ffffff;
+  --color-secondary-dark: #b3b3b3;
+
+  --color-accent: #f7b32b;
+  --color-accent-light: #ffea9e;
+  --color-accent-dark: #c78300;
+
+  --background: #f0f2f5;
+  --text-color: #000000;
+  --text-color-light: #ffffff;
+  --text-color-dark: #000000;
 }
 
 :root [data-theme="dark"] {
