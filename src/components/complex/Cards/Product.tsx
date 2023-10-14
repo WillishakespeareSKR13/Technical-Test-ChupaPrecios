@@ -22,7 +22,7 @@ const CardProduct = (props: Props) => {
         flex-direction: column;
         width: 100%;
         height: 100%;
-        background-color: var(--background-light);
+        background-color: var(--background-card);
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
         border: var(--border);
@@ -34,7 +34,7 @@ const CardProduct = (props: Props) => {
         href={`/product/${product?.id}`}
         className={css`
           position: relative;
-          background-color: var(--background);
+          background-color: var(--background-card-alt);
           border-radius: var(--radius);
           &:hover {
             filter: contrast(0.9);
@@ -67,7 +67,7 @@ const CardProduct = (props: Props) => {
         css={css`
           flex-direction: column;
           padding: var(--space-large) var(--space-large);
-          background-color: var(--background-light);
+          background-color: var(--background-card);
           gap: var(--space-large);
         `}
       >
@@ -110,7 +110,6 @@ const CardProduct = (props: Props) => {
         </AtomWrapper>
         <AtomWrapper
           css={css`
-            background-color: var(--background-light);
             gap: var(--space-regular);
             a {
               width: 100%;
