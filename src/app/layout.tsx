@@ -2,6 +2,8 @@ import type { ReactNode } from "react";
 import "../css/vars.css";
 import "../css/globals.css";
 import "../css/animations.css";
+import "../css/icons.css";
+
 import type { Metadata } from "next";
 import Theme from "@/theme";
 import { inter } from "@/fonts/google";
@@ -20,11 +22,7 @@ const RootLayout = (props: Props) => {
 
   return (
     <html suppressHydrationWarning lang="en">
-      <script
-        async
-        src="https://kit.fontawesome.com/f2d307713b.js"
-        crossOrigin="anonymous"
-      ></script>
+      <script async src="https://kit.fontawesome.com/f2d307713b.js"></script>
       <body className={inter?.className}>
         {children}
         <Theme.setup />
