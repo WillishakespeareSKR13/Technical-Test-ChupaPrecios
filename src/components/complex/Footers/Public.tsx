@@ -10,6 +10,7 @@ const FooterPublic = () => {
     <AtomElement
       as="footer"
       css={css`
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -20,6 +21,7 @@ const FooterPublic = () => {
         as="section"
         css={css`
           width: 100%;
+          flex-direction: column;
           padding: var(--space-padding);
           gap: var(--space-regular);
           max-width: var(--max-content-width);
@@ -44,8 +46,8 @@ const FooterPublic = () => {
           `}
         >
           <AtomText
+            astheme="light"
             css={css`
-              color: var(--color-text-light) !important;
               white-space: nowrap;
               text-transform: uppercase;
             `}
@@ -63,9 +65,8 @@ const FooterPublic = () => {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-between !important;
             gap: var(--space-medium);
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
           `}
         >
@@ -73,6 +74,7 @@ const FooterPublic = () => {
             <AtomWrapper
               key={method.id}
               css={css`
+                display: flex;
                 width: max-content;
                 height: 100%;
                 align-items: center;
@@ -82,13 +84,7 @@ const FooterPublic = () => {
                 }
               `}
             >
-              <Image
-                width={60}
-                height={40}
-                layout="fixed"
-                alt={method.alt}
-                src={method.src}
-              />
+              <Image width={60} height={40} alt={method.alt} src={method.src} />
             </AtomWrapper>
           ))}
         </AtomWrapper>
@@ -98,7 +94,7 @@ const FooterPublic = () => {
         as="small"
         css={css`
           display: flex;
-          flex-direction: row !important;
+          flex-direction: row;
           width: 100%;
           justify-content: center;
           align-items: center;
