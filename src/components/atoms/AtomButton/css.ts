@@ -35,6 +35,7 @@ export const cvAsType = cv({
 
 export const stylesButton = (props: AtomButtonProps) => {
   const { className, css, astype = "solid" } = props;
-  const classes = cx([cvAsType(astype), className, css]);
+  const cssAsType = cvAsType(astype);
+  const classes = cx([cssAsType, className, css]);
   return classes;
 };
