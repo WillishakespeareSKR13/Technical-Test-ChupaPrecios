@@ -80,11 +80,11 @@ const cssTag = css`
 `;
 
 const cssOffer = css`
-  background-color: var(--background) !important;
-  border: var(--border) !important;
+  background-color: var(--disable) !important;
+  border: var(--disable-border) !important;
   box-shadow: var(--box-shadow) !important;
   span {
-    color: var(--color-text-alt) !important;
+    color: var(--disable-text) !important;
     text-decoration: line-through;
   }
 `;
