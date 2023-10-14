@@ -99,6 +99,9 @@ const FooterPublic = () => {
             gap: var(--space-small);
             font-weight: 700 !important;
             font-size: 14px !important;
+            b {
+              opacity: 0.6;
+            }
           `}
         >
           Copyright © <FooterLinkSmall /> all rights reserved. Powered by
