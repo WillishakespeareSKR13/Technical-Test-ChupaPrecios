@@ -15,8 +15,10 @@ export type IProduct = {
 const generateRandomProduct = (id: number): IProduct => {
   const productName = faker.commerce.productName();
   const productPrice = faker.commerce.price();
-  const productImage = faker.image.url();
-  const productDescription = faker.lorem.sentence();
+  const productImage = faker.image.urlLoremFlickr({
+    category: "technics",
+  });
+  const productDescription = faker.commerce.productDescription();
   const productStock = faker.number.int();
   const productCategory = faker.commerce.department();
   const createdAt = faker.date.past().toISOString();
@@ -35,6 +37,6 @@ const generateRandomProduct = (id: number): IProduct => {
   };
 };
 
-export const PRODUCTS: IProduct[] = Array.from({ length: 100000 }, (_, i) =>
+export const PRODUCTS: IProduct[] = Array.from({ length: 100 }, (_, i) =>
   generateRandomProduct(i + 1)
 );
