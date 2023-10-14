@@ -39,6 +39,7 @@ export const metadata: Metadata = {
   colorScheme: "light dark",
   creator: "WillSkr",
   publisher: "WillSkr",
+  metadataBase: new URL("https://technical-test-chupa-precios.vercel.app/"),
   formatDetection: {
     email: true,
     telephone: true,
