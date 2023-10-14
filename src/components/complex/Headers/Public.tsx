@@ -7,6 +7,7 @@ import AtomElement from "@/components/atoms/AtomElement";
 import AtomIcon from "@/components/atoms/AtomIcon";
 import Link from "next/link";
 import ButtonOpenCart from "../Butons/OpenCart";
+import ToggleTheme from "../Toggles/Theme";
 
 const HeaderPublic = () => {
   return (
@@ -16,7 +17,7 @@ const HeaderPublic = () => {
         width: 100%;
         z-index: 100;
         flex-direction: row;
-        background-color: var(--background-light);
+        background-color: var(--background-header);
         border-bottom: var(--border);
         box-shadow: var(--box-shadow);
         position: sticky;
@@ -66,6 +67,7 @@ const HeaderPublic = () => {
           justify-content: flex-end;
         `}
       >
+        <ToggleTheme />
         <AtomButton>Ingresar</AtomButton>
         <ButtonOpenCart>
           <AtomIcon icon="shopping-cart" />
