@@ -4,6 +4,7 @@ import { css } from "@kuma-ui/core";
 import Image from "next/image";
 import InputSearchProduct from "../Inputs/SearchProduct";
 import AtomElement from "@/components/atoms/AtomElement";
+import AtomIcon from "@/components/atoms/AtomIcon";
 
 const HeaderPublic = () => {
   return (
@@ -17,11 +18,19 @@ const HeaderPublic = () => {
         box-shadow: var(--box-shadow);
         position: sticky;
         top: 0;
-        padding: 0 1rem;
+        padding: 0 var(--space-vertical);
         justify-content: center;
         align-items: center;
+
         display: grid;
+        grid-template-areas: "logo search user";
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+
+        @media (max-width: 768px) {
+          padding: var(--space-vertical);
+          grid-template-areas: "logo user" "search search";
+          gap: var(--space-vertical);
+        }
       `}
     >
       <Image
@@ -33,14 +42,19 @@ const HeaderPublic = () => {
       />
       <AtomWrapper
         css={css`
+          grid-area: search;
           justify-content: center;
           align-items: center;
+          @media (max-width: 768px) {
+            width: 100%;
+          }
         `}
       >
         <InputSearchProduct />
       </AtomWrapper>
       <AtomWrapper
         css={css`
+          grid-area: user;
           display: flex;
           flex-direction: row;
           gap: 1rem;
@@ -48,7 +62,9 @@ const HeaderPublic = () => {
         `}
       >
         <AtomButton>Ingresar</AtomButton>
-        <AtomButton astype="outline">Iniciar Sesión</AtomButton>
+        <AtomButton astype="outline">
+          <AtomIcon icon="shopping-cart" />
+        </AtomButton>
       </AtomWrapper>
     </AtomElement>
   );
