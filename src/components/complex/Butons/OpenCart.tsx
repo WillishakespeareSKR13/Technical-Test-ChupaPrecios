@@ -12,9 +12,9 @@ type Props = {
 
 const ButtonOpenCart = (props: Props) => {
   const { children } = props;
-  const carShops = useAtomValue(CartShopAtom);
+  const { quantity } = useAtomValue(CartShopAtom);
 
-  const hasProducts = carShops.length > 0;
+  const hasProducts = quantity > 0;
 
   return (
     <AtomButton
@@ -53,7 +53,7 @@ const ButtonOpenCart = (props: Props) => {
             transform: translate(60%, -60%);
           `}
         >
-          {Math.min(99, carShops.length)} {carShops.length > 99 && "+"}
+          {Math.min(99, quantity)} {quantity > 99 && "+"}
         </AtomText>
       )}
       {children}
