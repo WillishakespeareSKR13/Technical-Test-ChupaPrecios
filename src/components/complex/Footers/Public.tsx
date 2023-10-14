@@ -45,7 +45,7 @@ const FooterPublic = () => {
         >
           <AtomText
             css={css`
-              color: var(--color-text-light);
+              color: var(--color-text-light) !important;
               white-space: nowrap;
               text-transform: uppercase;
             `}
