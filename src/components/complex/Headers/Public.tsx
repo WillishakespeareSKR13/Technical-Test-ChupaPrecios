@@ -44,6 +44,9 @@ const HeaderPublic = () => {
           width={140}
           priority
           src="/images/logo.svg"
+          className={css`
+            mix-blend-mode: var(--mix-blend-mode);
+          `}
         />
       </Link>
       <AtomWrapper
