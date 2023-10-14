@@ -13,6 +13,7 @@ const HeaderPublic = () => {
       as="nav"
       css={css`
         width: 100%;
+        z-index: 100;
         flex-direction: row;
         background-color: var(--background-light);
         border-bottom: var(--border);
@@ -65,8 +66,21 @@ const HeaderPublic = () => {
         `}
       >
         <AtomButton>Ingresar</AtomButton>
-        <AtomButton astype="outline">
-          <AtomIcon icon="shopping-cart" />
+        <AtomButton
+          astype="outline"
+          css={css`
+            display: flex !important;
+            flex-direction: row !important;
+            gap: var(--space-medium) !important;
+            padding: var(--space-medium) 12px !important;
+          `}
+        >
+          <AtomIcon
+            icon="shopping-cart"
+            css={css`
+              transform: translate(0px, 1px);
+            `}
+          />
         </AtomButton>
       </AtomWrapper>
     </AtomElement>
