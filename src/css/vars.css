@@ -21,20 +21,26 @@
 
   --space-small: 5px;
   --space-medium: 8px;
+  --space-regular: 12px;
   --space-large: 20px;
   --space-xlarge: 40px;
   --space-x2large: 60px;
 
-  --space-vertical: var(--space-x2large);
+  --space-vertical: var(--space-xlarge);
   --space-horizontal: var(--space-xlarge);
+
+  --space-padding: var(--space-vertical) var(--space-horizontal);
 
   --breakpoint-desktop: 1200px;
   --breakpoint-tablet: 900px;
   --breakpoint-mobile: 700px;
 
+  --max-content-width: 1200px;
+
   --background: #f5f5f5;
+  --background-alt: #383838;
   --background-light: #ffffff;
-  --background-dark: #202020;
+  --background-dark: #181818;
 
   --border-color: #e5e6eb;
 
