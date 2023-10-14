@@ -9,6 +9,7 @@ const NotFound = () => (
     wrapper={{
       css: css`
         display: flex;
+        flex-direction: column;
         flex: 1;
         justify-content: center;
         align-items: center;
