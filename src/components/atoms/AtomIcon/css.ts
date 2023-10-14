@@ -4,12 +4,12 @@ import { AtomIconProps } from "./types";
 
 export const cssIcon = css`
   font-size: 14px;
-  height: 15px;
   display: flex !important;
   align-items: center;
   justify-content: flex-end;
   font-weight: 400;
   font-family: "Font Awesome 5 Free";
+  transition: all 0.3s ease-in-out;
 `;
 
 export const cssPrimary = css`
