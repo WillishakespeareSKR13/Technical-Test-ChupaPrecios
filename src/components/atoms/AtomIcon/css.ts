@@ -25,11 +25,11 @@ export const cssPrimary = css`
 `;
 
 export const cssLight = css`
-  color: var(--color-light);
+  color: var(--color-text-light);
 `;
 
 export const cssDark = css`
-  color: var(--color-dark);
+  color: var(--color-text-dark);
 `;
 
 export const cssAlt = css`
