@@ -27,15 +27,6 @@ const FooterPublic = () => {
           max-width: var(--max-content-width);
         `}
       >
-        <Link href="/">
-          <Image
-            alt="ChupaPrecios"
-            height={80}
-            width={180}
-            priority
-            src="/images/logo-footer.png"
-          />
-        </Link>
         <AtomWrapper
           css={css`
             width: 100%;
@@ -48,7 +39,7 @@ const FooterPublic = () => {
           <AtomText
             astheme="alt"
             css={css`
-              font-weight: 600 !important;
+              font-weight: 700 !important;
               font-size: 12px;
               white-space: nowrap;
               text-transform: uppercase;
@@ -56,15 +47,6 @@ const FooterPublic = () => {
           >
             Métodos de pago
           </AtomText>
-          <hr
-            className={css`
-              width: 100%;
-              height: 2px;
-              background-color: var(--color-alt);
-              border-radius: var(--radius);
-              border: 1px solid var(--color-alt);
-            `}
-          />
         </AtomWrapper>
         <AtomWrapper
           css={css`
@@ -87,10 +69,11 @@ const FooterPublic = () => {
                 justify-content: center;
                 img {
                   object-fit: contain;
+                  opacity: 0.4;
                 }
               `}
             >
-              <Image width={60} height={40} alt={method.alt} src={method.src} />
+              <Image width={65} height={45} alt={method.alt} src={method.src} />
             </AtomWrapper>
           ))}
         </AtomWrapper>
@@ -107,8 +90,9 @@ const FooterPublic = () => {
           gap: var(--space-small);
           text-align: center;
           background-color: var(--background-alt);
-          padding: var(--space-regular);
-          font-weight: 500;
+          padding: 12px 0;
+          font-weight: 400 !important;
+          font-size: 12px !important;
         `}
       >
         Copyright © <FooterLinkSmall /> all rights reserved. Powered by
