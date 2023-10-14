@@ -19,6 +19,7 @@ const LayoutHome = (props: Props) => {
       <AtomElement
         as="main"
         css={css`
+          display: flex;
           min-height: 100vh;
         `}
         {...wrapper}
