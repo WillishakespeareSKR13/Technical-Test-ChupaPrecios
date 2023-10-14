@@ -35,6 +35,6 @@ const generateRandomProduct = (id: number): IProduct => {
   };
 };
 
-export const PRODUCTS: IProduct[] = Array.from({ length: 100 }, (_, i) =>
+export const PRODUCTS: IProduct[] = Array.from({ length: 100000 }, (_, i) =>
   generateRandomProduct(i + 1)
 );
