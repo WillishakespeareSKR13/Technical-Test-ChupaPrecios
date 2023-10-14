@@ -10,6 +10,8 @@ export const cssIcon = css`
   font-weight: 400;
   font-family: "Font Awesome 5 Free";
   transition: all 0.3s ease-in-out;
+  transform: translate(0px, 1px);
+
   width: 17px !important;
   height: 16px !important;
   &:before {
