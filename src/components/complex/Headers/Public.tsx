@@ -71,7 +71,7 @@ const HeaderPublic = () => {
         `}
       >
         <ToggleTheme />
-        <AtomButton>Ingresar</AtomButton>
+        <AtomButton astype="outline">Ingresar</AtomButton>
         <ButtonOpenCart>
           <AtomIcon icon="shopping-cart" />
         </ButtonOpenCart>
