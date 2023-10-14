@@ -7,6 +7,7 @@ import { IProduct } from "@/types/product";
 import { css } from "@kuma-ui/core";
 import Link from "next/link";
 import ButtonAddCart from "../Butons/AddCart";
+import TagQuantityProduct from "../Tags/QuantityProduct";
 
 type Props = {
   product: IProduct;
@@ -17,6 +18,7 @@ const CardProduct = (props: Props) => {
   return (
     <AtomWrapper
       css={css`
+        position: relative;
         flex-direction: column;
         width: 100%;
         height: 100%;
@@ -25,8 +27,10 @@ const CardProduct = (props: Props) => {
         box-shadow: var(--box-shadow);
         border: var(--border);
         background-color: var(--background);
+        overflow: hidden;
       `}
     >
+      <TagQuantityProduct id={product.id} />
       <Link
         href={`/product/${product?.id}`}
         className={css`
