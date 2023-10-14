@@ -18,6 +18,11 @@ export const cssSmall = css`
   color: var(--color-text-light);
 `;
 
+export const cssB = css`
+  font-weight: 600;
+  color: var(--color-primary);
+`;
+
 const cvAs = cv({
   base: cssElement,
   section: "",
@@ -30,7 +35,7 @@ const cvAs = cv({
   small: cssSmall,
   strong: "",
   i: "",
-  b: "",
+  b: cssB,
   em: "",
   mark: "",
   sub: "",
