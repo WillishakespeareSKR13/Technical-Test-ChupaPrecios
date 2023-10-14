@@ -1,9 +1,19 @@
+import AtomButton from "@/components/atoms/AtomButton";
+import AtomHeading from "@/components/atoms/AtomHeading";
+import AtomIcon from "@/components/atoms/AtomIcon";
+import AtomParagraph from "@/components/atoms/AtomParagraph";
 import AtomWrapper from "@/components/atoms/AtomWrapper";
-import { IProduct } from "@/constants/product";
+import { IProduct } from "@/types/product";
 import { css } from "@kuma-ui/core";
+import Link from "next/link";
+import ButtonAddCart from "../Butons/AddCart";
 
-const CardProduct = (props: IProduct) => {
-  const { image, name, price } = props;
+type Props = {
+  product: IProduct;
+};
+
+const CardProduct = (props: Props) => {
+  const { product } = props;
   return (
     <AtomWrapper
       css={css`
@@ -11,43 +21,109 @@ const CardProduct = (props: IProduct) => {
         width: 100%;
         height: 100%;
         background-color: var(--background-light);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
         border: var(--border);
+        background-color: var(--background);
       `}
     >
-      <img
-        src={image}
-        alt={name}
+      <Link
+        href={`/product/${product?.id}`}
         className={css`
-          width: 100%;
-          height: 200px;
-          object-fit: cover;
-        `}
-      />
-      <AtomWrapper
-        css={css`
-          padding: var(--space-regular);
+          background-color: var(--background);
+          border-radius: var(--radius);
+          &:hover {
+            filter: contrast(0.9);
+          }
+          transition: all 0.4s ease-in-out;
         `}
       >
-        <h4
+        <img
+          src={product?.image}
+          alt={product?.title}
           className={css`
-            font-weight: 500;
-            font-size: 16px;
-            color: var(--color-primary);
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            padding: var(--space-large);
+            border-radius: var(--radius);
+            mix-blend-mode: multiply;
+            filter: contrast(1);
+            &:hover {
+              transform: scale(1.09);
+              filter: brightness(1.1) contrast(1.1);
+            }
+            transition: all 0.4s ease-in-out;
+          `}
+        />
+      </Link>
+      <AtomWrapper
+        css={css`
+          flex-direction: column;
+          padding: var(--space-large) var(--space-large);
+          background-color: var(--background-light);
+          gap: var(--space-large);
+        `}
+      >
+        <AtomWrapper
+          css={css`
+            flex: 1;
+            flex-direction: column;
+            gap: var(--space-small);
           `}
         >
-          {name}
-        </h4>
-        <p
-          className={css`
-            font-weight: 400;
-            font-size: 14px;
-            color: var(--color-secondary);
+          <AtomHeading
+            as="h4"
+            className={css`
+              font-weight: 600 !important;
+              font-size: 16px !important;
+              color: var(--color-text) !important;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+            `}
+          >
+            {product?.title}
+          </AtomHeading>
+          <AtomParagraph
+            className={css`
+              font-weight: 400;
+              font-size: 12px !important;
+              color: var(--color-text-alt) !important;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+            `}
+          >
+            {product?.description}
+          </AtomParagraph>
+        </AtomWrapper>
+        <AtomWrapper
+          css={css`
+            background-color: var(--background-light);
+            gap: var(--space-regular);
+            a {
+              width: 100%;
+            }
           `}
         >
-          {price}
-        </p>
+          <Link href={`/product/${product?.id}`}>
+            <AtomButton
+              css={css`
+                width: 100% !important;
+              `}
+            >
+              Ver Producto
+            </AtomButton>
+          </Link>
+          <ButtonAddCart product={product}>
+            <AtomIcon icon="store" />
+          </ButtonAddCart>
+        </AtomWrapper>
       </AtomWrapper>
     </AtomWrapper>
   );
