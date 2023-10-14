@@ -6,8 +6,16 @@ import { css } from "@kuma-ui/core";
 
 const Products = async () => {
   const response = await fetch("https://fakestoreapi.com/products");
-  const data = await response.json();
-  return data as IProduct[];
+  const data = (await response.json()) as IProduct[];
+  const dataWithOffer = data.map((product, idx) => {
+    if (idx > 5) return { ...product, hasOffer: false, priceOffer: 0 };
+    return {
+      ...product,
+      hasOffer: true,
+      priceOffer: product.price - product.price * 0.25,
+    };
+  });
+  return dataWithOffer;
 };
 
 const Home = async () => {
