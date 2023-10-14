@@ -20,6 +20,7 @@ const LayoutHome = (props: Props) => {
         as="main"
         css={css`
           display: flex;
+          flex-direction: column;
           min-height: 100vh;
         `}
         {...wrapper}
