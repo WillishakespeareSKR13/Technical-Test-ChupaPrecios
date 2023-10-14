@@ -13,7 +13,7 @@ const HeaderPublic = () => {
       as="nav"
       css={css`
         width: 100%;
-        min-height: 60px;
+        flex-direction: row;
         background-color: var(--background-light);
         border-bottom: var(--border);
         box-shadow: var(--box-shadow);
