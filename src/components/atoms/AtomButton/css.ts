@@ -5,7 +5,8 @@ import { AtomButtonProps } from "./types";
 export const cssButton = css`
   width: max-content;
   height: max-content;
-  padding: 8px 22px;
+  min-height: 35px;
+  padding: var(--space-medium) var(--space-large);
   border-radius: var(--border-radius);
   font-size: 12px;
   line-height: 16px;
