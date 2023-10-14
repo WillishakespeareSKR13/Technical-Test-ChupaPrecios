@@ -7,7 +7,7 @@ export const cssText = css`
   font-weight: 500;
   line-height: 1.5;
   color: var(--color-text-alt);
-  transition: color 0.2s ease-in-out;
+  transition: color 0.3s ease-in-out;
 `;
 
 export const cssPrimary = css`

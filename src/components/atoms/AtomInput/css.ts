@@ -29,7 +29,7 @@ export const cssInput = css`
     box-shadow: var(--box-shadow-focus);
   }
 
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 `;
 
 export const stylesInput = (props: AtomInputProps) => {
