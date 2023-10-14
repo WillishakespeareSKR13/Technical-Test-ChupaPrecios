@@ -24,11 +24,16 @@ export const cssDark = css`
   color: var(--color-dark);
 `;
 
+export const cssAlt = css`
+  color: var(--color-alt);
+`;
+
 const cvAsTheme = cv({
   base: cssIcon,
   primary: cssPrimary,
   light: cssLight,
   dark: cssDark,
+  alt: cssAlt,
 });
 
 export const stylesIcon = (props: AtomIconProps) => {
