@@ -10,6 +10,12 @@ export const cssIcon = css`
   font-weight: 400;
   font-family: "Font Awesome 5 Free";
   transition: all 0.3s ease-in-out;
+  width: 17px !important;
+  height: 16px !important;
+  &:before {
+    width: 17px !important;
+    height: 16px !important;
+  }
 `;
 
 export const cssPrimary = css`

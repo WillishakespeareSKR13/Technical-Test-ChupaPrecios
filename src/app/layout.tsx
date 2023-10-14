@@ -17,8 +17,8 @@ const RootLayout = (props: Props) => {
 
   return (
     <html suppressHydrationWarning lang="en">
-      <script async src="https://kit.fontawesome.com/f2d307713b.js"></script>
       <body className={inter?.className}>
+        <script async src="https://kit.fontawesome.com/f2d307713b.js"></script>
         {children}
         <Theme.setup />
       </body>

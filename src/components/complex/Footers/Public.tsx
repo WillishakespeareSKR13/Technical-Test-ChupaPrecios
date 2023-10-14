@@ -90,9 +90,9 @@ const FooterPublic = () => {
           gap: var(--space-small);
           text-align: center;
           background-color: var(--background-alt);
-          padding: 12px 0;
+          padding: 14px 0;
           font-weight: 400 !important;
-          font-size: 12px !important;
+          font-size: 14px !important;
         `}
       >
         Copyright © <FooterLinkSmall /> all rights reserved. Powered by
