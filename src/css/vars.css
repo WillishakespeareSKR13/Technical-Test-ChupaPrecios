@@ -27,6 +27,7 @@
   --box-shadow-focus: 0px 2px 2px rgba(0, 0, 0, 0.15);
 
   --text-color: #000000;
+  --text-color-alt: #4a4a4a;
   --text-color-light: #ffffff;
   --text-color-dark: #d6d6d6;
 }
