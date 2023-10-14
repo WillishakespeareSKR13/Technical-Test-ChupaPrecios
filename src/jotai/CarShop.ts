@@ -1,41 +1,41 @@
+import { IProduct } from "@/types/product";
 import { atom } from "jotai";
 import { atomWithStorage } from "jotai/utils";
-import { ProductsAtom } from "./Products";
 
-export const CarShopStorageAtom = atomWithStorage("CAR_SHOP", [] as string[]);
+export const CartShopStorageAtom = atomWithStorage(
+  "CAR_SHOP",
+  [] as IProduct[]
+);
 
-export const CarShopAtom = atom(
+export const CartShopAtom = atom(
   (get) => {
-    const products = get(ProductsAtom);
-    const carShop = get(CarShopStorageAtom);
-    const findProducts = products.filter((product) =>
-      carShop.includes(product.id)
-    );
-    return findProducts;
+    const cartShopStorage = get(CartShopStorageAtom);
+    return cartShopStorage;
   },
-  (get, set, update: ICarShopPayload) => {
+  (get, set, update: ICartShopPayload) => {
     const { type, payload } = update;
-    const carShop = get(CarShopStorageAtom);
-    const action = ReducerCarShop[type ?? "DEFAULT"] ?? ReducerCarShop.DEFAULT;
-    const newState = action(carShop, payload);
-    set(CarShopStorageAtom, newState);
+    const cartShop = get(CartShopStorageAtom);
+    const action =
+      ReducerCartShop[type ?? "DEFAULT"] ?? ReducerCartShop.DEFAULT;
+    const newState = action(cartShop, payload);
+    set(CartShopStorageAtom, newState);
   }
 );
 
-type ICarShopPayload = {
+type ICartShopPayload = {
   type: "ADD" | "REMOVE" | "CLEAR";
-  payload: string;
+  payload: IProduct;
 };
 
-const ReducerCarShop = {
-  ADD: (state: string[], payload: string) => {
+const ReducerCartShop = {
+  ADD: (state: IProduct[], payload: IProduct) => {
     const newState = [...state, payload];
     return newState;
   },
-  REMOVE: (state: string[], payload: string) => {
-    const newState = state.filter((item) => item !== payload);
+  REMOVE: (state: IProduct[], payload: IProduct) => {
+    const newState = state.filter((item) => item?.id !== payload?.id);
     return newState;
   },
-  CLEAR: () => [] as string[],
-  DEFAULT: (state: string[]) => state,
+  CLEAR: () => [] as IProduct[],
+  DEFAULT: (state: IProduct[]) => state,
 };
