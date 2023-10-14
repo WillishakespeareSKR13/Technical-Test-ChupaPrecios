@@ -1,6 +1,7 @@
 "use client";
 
 import AtomInput from "@/components/atoms/AtomInput";
+import { css } from "@kuma-ui/core";
 import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
@@ -18,6 +19,9 @@ const InputSearchProduct = () => {
         router.push(`/busqueda/${value}`);
       }}
       placeholder="Buscar productos"
+      css={css`
+        width: 100%;
+      `}
     />
   );
 };
