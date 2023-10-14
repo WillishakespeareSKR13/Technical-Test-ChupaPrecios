@@ -13,7 +13,7 @@ export const cssInput = css`
   font-weight: 500;
   color: var(--color-text);
   cursor: pointer;
-  background-color: var(--background-color);
+  background-color: var(--background);
   border: var(--border);
   box-shadow: var(--box-shadow);
   &::placeholder {
