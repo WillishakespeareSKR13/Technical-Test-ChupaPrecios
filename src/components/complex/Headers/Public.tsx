@@ -30,7 +30,7 @@ const HeaderPublic = () => {
         @media (max-width: 768px) {
           padding: var(--space-vertical);
           grid-template-areas: "logo user" "search search";
-          gap: var(--space-vertical);
+          gap: var(--space-medium);
         }
       `}
     >
