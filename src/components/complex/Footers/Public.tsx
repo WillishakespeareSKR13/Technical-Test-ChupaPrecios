@@ -30,8 +30,8 @@ const FooterPublic = () => {
         <Link href="/">
           <Image
             alt="ChupaPrecios"
-            height={60}
-            width={140}
+            height={80}
+            width={180}
             priority
             src="/images/logo-footer.png"
           />
@@ -46,8 +46,10 @@ const FooterPublic = () => {
           `}
         >
           <AtomText
-            astheme="light"
+            astheme="alt"
             css={css`
+              font-weight: 600 !important;
+              font-size: 12px;
               white-space: nowrap;
               text-transform: uppercase;
             `}
@@ -57,6 +59,10 @@ const FooterPublic = () => {
           <hr
             className={css`
               width: 100%;
+              height: 2px;
+              background-color: var(--color-alt);
+              border-radius: var(--radius);
+              border: 1px solid var(--color-alt);
             `}
           />
         </AtomWrapper>
@@ -102,6 +108,7 @@ const FooterPublic = () => {
           text-align: center;
           background-color: var(--background-alt);
           padding: var(--space-regular);
+          font-weight: 500;
         `}
       >
         Copyright © <FooterLinkSmall /> all rights reserved. Powered by
