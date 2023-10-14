@@ -16,7 +16,7 @@ export const cssButton = css`
 const cssButonSolid = css`
   font-weight: 600;
   background-color: var(--color-primary);
-  color: var(--text-color-light);
+  color: var(--color-text-light);
   border: 1px solid var(--color-primary);
 `;
 

@@ -6,7 +6,7 @@ export const cssHeading = css`
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
-  color: var(--text-color);
+  color: var(--color-text);
 `;
 
 const cssHeadingH6 = css`

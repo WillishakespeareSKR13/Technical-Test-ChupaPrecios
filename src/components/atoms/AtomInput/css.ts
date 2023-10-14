@@ -11,13 +11,13 @@ export const cssInput = css`
   line-height: 16px;
   text-align: left;
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--color-text);
   cursor: pointer;
   background-color: var(--background-color);
   border: var(--border);
   box-shadow: var(--box-shadow);
   &::placeholder {
-    color: var(--text-color-dark);
+    color: var(--color-text-dark);
   }
   &:hover {
     border: var(--border-hover);

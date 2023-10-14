@@ -6,7 +6,7 @@ export const cssParagraph = css`
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
-  color: var(--text-color-alt);
+  color: var(--color-text-alt);
 `;
 
 export const stylesParagraph = (props: AtomParagraphProps) => {
