@@ -4,13 +4,9 @@ import { AtomElementProps } from "./types";
 
 export const cssElement = css`
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: max-content;
 `;
 
 export const cssSmall = css`
-  width: max-content;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
