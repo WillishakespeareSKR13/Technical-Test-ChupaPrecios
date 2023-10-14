@@ -33,7 +33,7 @@ const cssHeadingH1 = css`
   font-size: 32px;
 `;
 
-export const cvAsType = cv({
+export const cvAs = cv({
   base: cssHeading,
   h1: cssHeadingH1,
   h2: cssHeadingH2,
@@ -45,7 +45,7 @@ export const cvAsType = cv({
 
 export const stylesHeading = (props: AtomHeadingProps) => {
   const { className, css, as = "h1" } = props;
-  const cssAs = cvAsType(as);
+  const cssAs = cvAs(as);
   const classes = cx([cssAs, className, css]);
   return classes;
 };
