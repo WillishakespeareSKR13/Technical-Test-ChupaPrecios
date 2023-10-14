@@ -79,25 +79,32 @@ const FooterPublic = () => {
         </AtomWrapper>
       </AtomElement>
 
-      <AtomElement
-        as="small"
+      <AtomWrapper
         css={css`
           display: flex;
-          flex-direction: row;
           width: 100%;
-          justify-content: center;
-          align-items: center;
-          gap: var(--space-small);
-          text-align: center;
           background-color: var(--background-alt);
           padding: 14px 0;
-          font-weight: 400 !important;
-          font-size: 14px !important;
         `}
       >
-        Copyright © <FooterLinkSmall /> all rights reserved. Powered by
-        <FooterLinkSmall />
-      </AtomElement>
+        <AtomText
+          astheme="alt"
+          css={css`
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-small);
+            font-weight: 700 !important;
+            font-size: 14px !important;
+          `}
+        >
+          Copyright © <FooterLinkSmall /> all rights reserved. Powered by
+          <FooterLinkSmall />
+        </AtomText>
+      </AtomWrapper>
     </AtomElement>
   );
 };
