@@ -8,11 +8,11 @@ const Products = async () => {
   const response = await fetch("https://fakestoreapi.com/products");
   const data = (await response.json()) as IProduct[];
   const dataWithOffer = data.map((product, idx) => {
-    if (idx > 5) return { ...product, hasOffer: false, priceOffer: 0 };
+    if (idx > 2) return { ...product, hasOffer: false, priceOffer: 0 };
     return {
       ...product,
       hasOffer: true,
-      priceOffer: product.price - product.price * 0.25,
+      priceOffer: product.price - product.price * 0.35,
     };
   });
   return dataWithOffer;
