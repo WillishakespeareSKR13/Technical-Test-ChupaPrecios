@@ -24,11 +24,12 @@ const Home = async () => {
           height: 100%;
           padding: var(--space-padding);
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
           gap: var(--space-regular);
         `}
       >
-        {products?.map((item) => (
-          <CardProduct key={item.id} {...item} />
+        {products?.map((product) => (
+          <CardProduct key={product.id} product={product} />
         ))}
       </AtomElement>
     </LayoutHome>
