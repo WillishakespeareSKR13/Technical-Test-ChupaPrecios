@@ -23,7 +23,7 @@ const HeaderPublic = () => {
         justify-content: center;
         align-items: center;
 
-        display: grid;
+        display: grid !important;
         grid-template-areas: "logo search user";
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
 
