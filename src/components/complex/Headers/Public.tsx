@@ -5,6 +5,7 @@ import Image from "next/image";
 import InputSearchProduct from "../Inputs/SearchProduct";
 import AtomElement from "@/components/atoms/AtomElement";
 import AtomIcon from "@/components/atoms/AtomIcon";
+import Link from "next/link";
 
 const HeaderPublic = () => {
   return (
@@ -33,13 +34,15 @@ const HeaderPublic = () => {
         }
       `}
     >
-      <Image
-        alt="ChupaPrecios"
-        height={60}
-        width={140}
-        priority
-        src="/images/logo.svg"
-      />
+      <Link href="/">
+        <Image
+          alt="ChupaPrecios"
+          height={60}
+          width={140}
+          priority
+          src="/images/logo.svg"
+        />
+      </Link>
       <AtomWrapper
         css={css`
           grid-area: search;
