@@ -6,6 +6,7 @@ import InputSearchProduct from "../Inputs/SearchProduct";
 import AtomElement from "@/components/atoms/AtomElement";
 import AtomIcon from "@/components/atoms/AtomIcon";
 import Link from "next/link";
+import ButtonOpenCart from "../Butons/OpenCart";
 
 const HeaderPublic = () => {
   return (
@@ -66,22 +67,9 @@ const HeaderPublic = () => {
         `}
       >
         <AtomButton>Ingresar</AtomButton>
-        <AtomButton
-          astype="outline"
-          css={css`
-            display: flex !important;
-            flex-direction: row !important;
-            gap: var(--space-medium) !important;
-            padding: var(--space-medium) 12px !important;
-          `}
-        >
-          <AtomIcon
-            icon="shopping-cart"
-            css={css`
-              transform: translate(0px, 1px);
-            `}
-          />
-        </AtomButton>
+        <ButtonOpenCart>
+          <AtomIcon icon="shopping-cart" />
+        </ButtonOpenCart>
       </AtomWrapper>
     </AtomElement>
   );
