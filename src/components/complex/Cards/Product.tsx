@@ -8,6 +8,7 @@ import { css } from "@kuma-ui/core";
 import Link from "next/link";
 import ButtonAddCart from "../Butons/AddCart";
 import TagQuantityProduct from "../Tags/QuantityProduct";
+import TagPriceProduct from "../Tags/PriceProduct";
 
 type Props = {
   product: IProduct;
@@ -18,7 +19,6 @@ const CardProduct = (props: Props) => {
   return (
     <AtomWrapper
       css={css`
-        position: relative;
         flex-direction: column;
         width: 100%;
         height: 100%;
@@ -30,10 +30,10 @@ const CardProduct = (props: Props) => {
         overflow: hidden;
       `}
     >
-      <TagQuantityProduct id={product.id} />
       <Link
         href={`/product/${product?.id}`}
         className={css`
+          position: relative;
           background-color: var(--background);
           border-radius: var(--radius);
           &:hover {
@@ -42,6 +42,8 @@ const CardProduct = (props: Props) => {
           transition: all 0.4s ease-in-out;
         `}
       >
+        <TagQuantityProduct id={product.id} />
+        <TagPriceProduct product={product} />
         <img
           src={product?.image}
           alt={product?.title}
