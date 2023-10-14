@@ -13,11 +13,11 @@ type Props = {
 
 const ButtonAddCart = (props: Props) => {
   const { product, children } = props;
-  const CarShop = useSetAtom(CartShopAtom);
+  const setCarShop = useSetAtom(CartShopAtom);
   return (
     <AtomButton
       onClick={() =>
-        CarShop({
+        setCarShop({
           type: "ADD",
           payload: product,
         })
