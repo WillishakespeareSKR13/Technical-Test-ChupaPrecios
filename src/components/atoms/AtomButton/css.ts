@@ -24,6 +24,9 @@ const cssButonSolid = css`
   &:hover {
     background-color: var(--color-primary-dark);
   }
+  * {
+    color: var(--color-text-light) !important;
+  }
 `;
 
 const cssButonOutline = css`

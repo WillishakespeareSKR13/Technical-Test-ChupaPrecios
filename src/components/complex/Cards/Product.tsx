@@ -54,7 +54,7 @@ const CardProduct = (props: Props) => {
             padding: var(--space-large);
             border-radius: var(--radius);
             mix-blend-mode: multiply;
-            filter: contrast(1);
+            filter: contrast(1) brightness(1);
             &:hover {
               transform: scale(1.09);
               filter: brightness(1.1) contrast(1.1);
@@ -120,13 +120,24 @@ const CardProduct = (props: Props) => {
             <AtomButton
               css={css`
                 width: 100% !important;
+                background-color: var(--background-card-button) !important;
+                border: var(--border) !important;
+                box-shadow: var(--box-shadow) !important;
+                border-radius: var(--border-radius) !important;
+                color: var(--background-card-button-text) !important;
+                font-weight: 700 !important;
+                &:hover {
+                  background-color: var(
+                    --background-card-button-hover
+                  ) !important;
+                }
               `}
             >
               Ver Producto
             </AtomButton>
           </Link>
           <ButtonAddCart product={product}>
-            <AtomIcon icon="store" />
+            <AtomIcon icon="basket-shopping" />
           </ButtonAddCart>
         </AtomWrapper>
       </AtomWrapper>

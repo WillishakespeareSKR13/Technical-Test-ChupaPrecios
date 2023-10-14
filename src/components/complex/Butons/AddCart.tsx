@@ -22,7 +22,7 @@ const ButtonAddCart = (props: Props) => {
           payload: product,
         })
       }
-      astype="outline"
+      astype="solid"
       css={css`
         padding: 0 12px;
       `}

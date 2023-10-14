@@ -58,6 +58,9 @@
 
   --background-card: #ffffff;
   --background-card-alt: #f5f5f5;
+  --background-card-button: #ffffff;
+  --background-card-button-hover: #f5f5f5;
+  --background-card-button-text: #666666;
 
   --disable: #f1f1f1;
   --disable-text: #a3a3a3;
@@ -87,14 +90,18 @@
   --color-text-alt: #d6d6d6;
   --color-text-light: #ffffff;
   --color-text-dark: #979797;
+  --color-text-gray: #242424;
 
   --background: #2e2e2e;
   --background-alt: #1a1a1a;
   --background-light: #363636;
   --background-dark: #111111;
 
-  --background-card: #242424;
+  --background-card: #202020;
   --background-card-alt: #fafafa;
+  --background-card-button: #2e2e2e;
+  --background-card-button-hover: #1a1a1a;
+  --background-card-button-text: #d4d4d4;
 
   --border-color: #1d1d1d;
   --background-header: #1f1f1f;
