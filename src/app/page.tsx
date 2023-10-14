@@ -1,18 +1,13 @@
 import AtomElement from "@/components/atoms/AtomElement";
 import CardProduct from "@/components/complex/Cards/Product";
 import LayoutHome from "@/components/layouts/Home";
-import { IProduct, PRODUCTS } from "@/constants/product";
+import { IProduct } from "@/types/product";
 import { css } from "@kuma-ui/core";
 
 const Products = async () => {
-  const PromiseProducts = new Promise<IProduct[]>((resolve) => {
-    // setTimeout(() => {
-    //   resolve(PRODUCTS);
-    // }, 2000);
-    resolve(PRODUCTS);
-  });
-  const response = await PromiseProducts;
-  return response;
+  const response = await fetch("https://fakestoreapi.com/products");
+  const data = await response.json();
+  return data as IProduct[];
 };
 
 const Home = async () => {
