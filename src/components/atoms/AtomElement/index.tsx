@@ -1,20 +1,7 @@
 import { forwardRef } from "react";
-import { AsEnumElement, AtomElementProps, IGetElement } from "./types";
+import { AtomElementProps } from "./types";
 import { stylesElement } from "./css";
-
-const getElement = (props: IGetElement) => {
-  const { as = "section" } = props;
-  const Elements = {
-    section: <section {...props} />,
-    article: <article {...props} />,
-    main: <main {...props} />,
-    header: <header {...props} />,
-    footer: <footer {...props} />,
-    aside: <aside {...props} />,
-    nav: <nav {...props} />,
-  } as Record<AsEnumElement, JSX.Element>;
-  return Elements[as];
-};
+import { getElement } from "./elements";
 
 const AtomElement = forwardRef<HTMLElement, AtomElementProps>((props, ref) => {
   const styles = stylesElement(props);
