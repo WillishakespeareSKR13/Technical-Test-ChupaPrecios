@@ -62,9 +62,17 @@
   --background-card-button-hover: #f5f5f5;
   --background-card-button-text: #666666;
 
+  --background-shopping-sidebar-alt: #f5f5f5;
+  --background-shopping-sidebar: #ffffff;
+
   --disable: #f1f1f1;
   --disable-text: #a3a3a3;
   --disable-border: 1px solid #d6d6d6;
+
+  --scrollbar-width: 6px;
+  --scrollbar-track: #f5f5f5;
+  --scrollbar-thumb: #d6d6d6;
+  --scrollbar-thumb-hover: #b3b3b3;
 
   --mix-blend-mode: normal;
 }
@@ -103,8 +111,15 @@
   --background-card-button-hover: #1a1a1a;
   --background-card-button-text: #d4d4d4;
 
+  --background-shopping-sidebar-alt: #1a1a1a;
+  --background-shopping-sidebar: #2e2e2e;
+
   --border-color: #1d1d1d;
   --background-header: #1f1f1f;
+
+  --scrollbar-track: #2e2e2e;
+  --scrollbar-thumb: #1d1d1d;
+  --scrollbar-thumb-hover: #0f0f0f;
 
   --mix-blend-mode: exclusion;
 }
@@ -124,5 +139,24 @@
 }
 
 html {
+  flex: 1;
   background: var(--background);
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 7px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
 }
