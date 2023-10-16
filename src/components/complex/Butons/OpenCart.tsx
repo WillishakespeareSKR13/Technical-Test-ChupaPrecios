@@ -2,9 +2,10 @@
 
 import AtomButton from "@/components/atoms/AtomButton";
 import AtomText from "@/components/atoms/AtomText";
-import { CartShopAtom } from "@/jotai/CarShop";
+import { CartShopAtom } from "@/jotai/cart";
+import { ModalCartAtom } from "@/jotai/modals";
 import { css } from "@kuma-ui/core";
-import { useAtomValue } from "jotai";
+import { useAtomValue, useSetAtom } from "jotai";
 
 type Props = {
   children: React.ReactNode;
@@ -13,12 +14,12 @@ type Props = {
 const ButtonOpenCart = (props: Props) => {
   const { children } = props;
   const { quantity } = useAtomValue(CartShopAtom);
-
+  const setModal = useSetAtom(ModalCartAtom);
   const hasProducts = quantity > 0;
 
   return (
     <AtomButton
-      onClick={() => {}}
+      onClick={() => setModal(true)}
       css={css`
         position: relative;
         padding: 0 12px !important;

@@ -1,7 +1,7 @@
 "use client";
 import AtomText from "@/components/atoms/AtomText";
 import AtomWrapper from "@/components/atoms/AtomWrapper";
-import { CartShopAtom } from "@/jotai/CarShop";
+import { CartShopAtom } from "@/jotai/cart";
 import { css } from "@kuma-ui/core";
 import { useAtomValue } from "jotai";
 
