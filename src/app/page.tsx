@@ -15,7 +15,14 @@ const Products = async () => {
       priceOffer: product.price - product.price * 0.35,
     };
   });
-  return dataWithOffer;
+
+  const sort = dataWithOffer.sort((a, b) => {
+    if (a.category > b.category) return -1;
+    if (a.category < b.category) return 1;
+    return 0;
+  });
+
+  return sort;
 };
 
 const Home = async () => {
