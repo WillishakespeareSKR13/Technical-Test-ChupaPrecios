@@ -33,11 +33,11 @@ const cvSideBar = cv({
   `,
   in: css`
     display: flex;
-    animation: slideIn 0.3s ease-in-out;
+    animation: slideIn 0.2s ease-in-out;
   `,
   out: css`
     display: none;
-    animation: slideOut 0.3s ease-in-out;
+    animation: slideOut 0.2s ease-in-out;
   `,
 });
 
