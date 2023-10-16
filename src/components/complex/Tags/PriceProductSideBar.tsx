@@ -9,7 +9,7 @@ type Props = {
   product: IProduct;
 };
 
-const TagPriceProduct = (props: Props) => {
+const TagPriceProductSideBar = (props: Props) => {
   const { product } = props;
 
   if (!product) return null;
@@ -18,18 +18,15 @@ const TagPriceProduct = (props: Props) => {
     <AtomWrapper
       css={css`
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         position: absolute;
         bottom: 8px;
-        right: 8px;
+        left: 8px;
         z-index: 1;
         gap: var(--space-small);
       `}
     >
-      <AtomWrapper css={cvOffer({ offer: product?.hasOffer })}>
-        <AtomText> {MoneyIntl.format(product?.price)}</AtomText>
-      </AtomWrapper>
-      {product?.hasOffer && (
+      {product?.hasOffer ? (
         <AtomWrapper
           css={css`
             background-color: var(--color-primary);
@@ -40,12 +37,12 @@ const TagPriceProduct = (props: Props) => {
             font-weight: var(--font-weight-bold);
             border-radius: var(--border-radius);
             padding: var(--space-small) var(--space-regular);
-            height: 32px;
+            height: 28px;
             display: flex;
             justify-content: center;
             align-items: center;
             span {
-              font-size: 12px;
+              font-size: 10px;
               font-weight: 700;
               color: var(--color-text-light);
             }
@@ -53,12 +50,16 @@ const TagPriceProduct = (props: Props) => {
         >
           <AtomText>Offer {MoneyIntl.format(product?.priceOffer)}</AtomText>
         </AtomWrapper>
+      ) : (
+        <AtomWrapper css={cvOffer({ offer: product?.hasOffer })}>
+          <AtomText>{MoneyIntl.format(product?.price)}</AtomText>
+        </AtomWrapper>
       )}
     </AtomWrapper>
   );
 };
 
-export default TagPriceProduct;
+export default TagPriceProductSideBar;
 
 const cssTag = css`
   width: max-content;
@@ -69,12 +70,12 @@ const cssTag = css`
   font-weight: var(--font-weight-bold);
   border-radius: var(--border-radius);
   padding: var(--space-small) var(--space-regular);
-  height: 32px;
+  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
   span {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 700;
     color: var(--color-text);
   }
