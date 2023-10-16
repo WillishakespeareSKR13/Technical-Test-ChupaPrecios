@@ -9,6 +9,7 @@ import Link from "next/link";
 import ButtonChangeCart from "../Butons/ChangeCart";
 import TagQuantityProduct from "../Tags/QuantityProduct";
 import TagPriceProduct from "../Tags/PriceProduct";
+import TagCategoryProduct from "../Tags/CategoryProduct";
 
 type Props = {
   product: IProduct;
@@ -44,6 +45,7 @@ const CardProduct = (props: Props) => {
       >
         <TagQuantityProduct id={product.id} />
         <TagPriceProduct product={product} />
+        <TagCategoryProduct product={product} />
         <img
           src={product?.image}
           alt={product?.title}
