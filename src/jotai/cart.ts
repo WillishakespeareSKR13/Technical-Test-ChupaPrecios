@@ -1,9 +1,6 @@
-import { IProduct } from "@/types/product";
+import { IProducStorage, IProduct } from "@/types/product";
 import { atom } from "jotai";
 import { atomWithStorage } from "jotai/utils";
-
-type IProductWithQuantity = IProduct & { quantity: number };
-type IProducStorage = Record<string, IProductWithQuantity>;
 
 export const CartShopStorageAtom = atomWithStorage(
   "CAR_SHOP",
@@ -16,9 +13,21 @@ export const CartShopAtom = atom(
     const products = Object.values(storage) ?? [];
     const quantity = products.reduce((acc, curr) => acc + curr.quantity, 0);
     const findProduct = (id: number) => storage[id];
+    const subtotal = products.reduce(
+      (acc, curr) =>
+        acc + (curr.hasOffer ? curr.priceOffer : curr.price) * curr.quantity,
+      0
+    );
+
+    const taxes = subtotal * 0.13 + 200;
+    const total = subtotal + taxes;
+
     return {
       storage,
       products,
+      total,
+      subtotal,
+      taxes,
       quantity,
       findProduct,
     };
@@ -33,8 +42,10 @@ export const CartShopAtom = atom(
   }
 );
 
+export type ICartShopType = "ADD" | "REMOVE" | "CLEAR";
+
 type ICartShopPayload = {
-  type: "ADD" | "REMOVE" | "CLEAR";
+  type: ICartShopType;
   payload: IProduct;
 };
 
