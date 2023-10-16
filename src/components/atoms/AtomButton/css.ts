@@ -47,6 +47,7 @@ export const cvAsType = cv({
   base: cssButton,
   solid: cssButonSolid,
   outline: cssButonOutline,
+  none: "",
 });
 
 export const stylesButton = (props: AtomButtonProps) => {
