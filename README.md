@@ -1,8 +1,12 @@
 # Technical Test Chupaprecios - Proyecto
 
-Bienvenido al repositorio del proyecto "Chupaprecios," una aplicación desarrollada como parte de una prueba técnica. Este README tiene como objetivo proporcionar una visión general de las decisiones de tecnología que impulsan esta aplicación y destacar las ventajas de las tecnologías seleccionadas.
+Este proyecto, denominado "technical-test-chupaprecios," se desarrolló como parte de una prueba técnica en la que el único requisito especificado fue el uso de React. Sin embargo, decidi ir más allá y explorar tecnologías adicionales para mejorar la calidad y el rendimiento de la aplicación.
 
-Durante el desarrollo de esta aplicación, se han tenido en cuenta las últimas tendencias y mejores prácticas en el desarrollo web y de aplicaciones. A continuación, detallamos las tecnologías utilizadas y las razones detrás de esas elecciones.
+En particular, opte por aprovechar la funcionalidad del app router de Next.js para lograr una experiencia de usuario más rápida y fluida. Next.js es conocido por su enrutamiento eficiente, lo que hace que la navegación entre páginas sea extremadamente veloz.
+
+Además, para el aspecto visual, he utilizado Kuma para gestionar los estilos CSS de la aplicación. Sin embargo, es importante destacar que, en futuros desarrollos, podría considerar la inclusión de bibliotecas como Styled Components y Framer Motion para lograr un acabado visual más llamativo a costa de un rendimiento ligeramente superior.
+
+Este proyecto se enfoca en la mejora continua y la adaptación a las necesidades cambiantes, lo que nos permite explorar nuevas tecnologías y técnicas en futuras iteraciones.
 
 ## Live Demo
 
