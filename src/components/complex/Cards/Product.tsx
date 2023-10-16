@@ -6,7 +6,7 @@ import AtomWrapper from "@/components/atoms/AtomWrapper";
 import { IProduct } from "@/types/product";
 import { css } from "@kuma-ui/core";
 import Link from "next/link";
-import ButtonAddCart from "../Butons/AddCart";
+import ButtonChangeCart from "../Butons/ChangeCart";
 import TagQuantityProduct from "../Tags/QuantityProduct";
 import TagPriceProduct from "../Tags/PriceProduct";
 
@@ -136,9 +136,9 @@ const CardProduct = (props: Props) => {
               Ver Producto
             </AtomButton>
           </Link>
-          <ButtonAddCart product={product}>
+          <ButtonChangeCart product={product} type="ADD">
             <AtomIcon icon="basket-shopping" />
-          </ButtonAddCart>
+          </ButtonChangeCart>
         </AtomWrapper>
       </AtomWrapper>
     </AtomWrapper>
