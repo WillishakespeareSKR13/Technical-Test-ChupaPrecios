@@ -12,3 +12,6 @@ export type IProduct = {
     count: number;
   };
 };
+
+export type IProductWithQuantity = IProduct & { quantity: number };
+export type IProducStorage = Record<string, IProductWithQuantity>;
