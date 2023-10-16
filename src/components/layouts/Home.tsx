@@ -5,6 +5,7 @@ import { css } from "@kuma-ui/core";
 import AtomElement from "../atoms/AtomElement";
 
 import { AtomElementProps } from "../atoms/AtomElement/types";
+import SideBarShoppingCart from "../complex/SideBars/ShoppingCart";
 
 type Props = {
   children: React.ReactNode;
@@ -19,6 +20,7 @@ const LayoutHome = (props: Props) => {
       <AtomElement
         as="main"
         css={css`
+          position: relative;
           display: flex;
           flex-direction: column;
           min-height: 100vh;
@@ -26,6 +28,7 @@ const LayoutHome = (props: Props) => {
         {...wrapper}
       >
         {children}
+        <SideBarShoppingCart />
       </AtomElement>
       <FooterPublic />
     </>
