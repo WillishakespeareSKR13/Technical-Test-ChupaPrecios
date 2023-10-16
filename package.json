@@ -16,7 +16,6 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.1.0",
     "@kuma-ui/next-plugin": "^1.1.11",
     "@types/node": "^20",
     "@types/react": "^18",
