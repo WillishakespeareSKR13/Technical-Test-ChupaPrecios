@@ -6,8 +6,6 @@ En particular, opte por aprovechar la funcionalidad del app router de Next.js pa
 
 Además, para el aspecto visual, he utilizado Kuma para gestionar los estilos CSS de la aplicación. Sin embargo, es importante destacar que, en futuros desarrollos, podría considerar la inclusión de bibliotecas como Styled Components y Framer Motion para lograr un acabado visual más llamativo a costa de un rendimiento ligeramente superior.
 
-Este proyecto se enfoca en la mejora continua y la adaptación a las necesidades cambiantes, lo que nos permite explorar nuevas tecnologías y técnicas en futuras iteraciones.
-
 ## Live Demo
 
 Puedes acceder a la aplicación en línea a través del siguiente enlace:
@@ -20,6 +18,23 @@ Puedes acceder a la aplicación en línea a través del siguiente enlace:
 - `build`: Compila la aplicación para producción.
 - `start`: Inicia la aplicación en un entorno de producción.
 - `lint`: Realiza análisis estático del código utilizando ESLint.
+
+# API de Productos
+
+Este proyecto utiliza la [Fake Store API](https://fakestoreapi.com/products) para obtener datos de productos. La Fake Store API es una fuente de datos simulados que proporciona una amplia variedad de productos ficticios para propósitos de desarrollo y pruebas.
+
+Aquí hay un ejemplo de cómo se puede utilizar esta API en JavaScript:
+
+```javascript
+fetch("https://fakestoreapi.com/products")
+  .then((response) => response.json())
+  .then((data) => {
+    // Aquí puedes manejar los datos de productos obtenidos de la API.
+  })
+  .catch((error) => {
+    console.error("Error al obtener datos de la API:", error);
+  });
+```
 
 ## Tecnologías Utilizadas
 
@@ -49,5 +64,3 @@ En conclusión, el proyecto "Chupaprecios" representa un esfuerzo dedicado a la 
 Estoy comprometido con la entrega de soluciones técnicas sólidas y eficientes. Si tienes alguna pregunta adicional o necesitas asistencia para configurar o ejecutar la aplicación, no dudes en ponerte en contacto con nosotros.
 
 Agradecemos tu interés en mi trabajo y espero que esta aplicación muestre no solo mis habilidades técnicas, sino también mi compromiso con la excelencia en el desarrollo de software.
-
-¡Gracias por explorar el proyecto "Chupaprecios"!
