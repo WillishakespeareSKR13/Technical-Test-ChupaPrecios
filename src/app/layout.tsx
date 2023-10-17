@@ -7,6 +7,7 @@ import "../css/icons.css";
 import type { Metadata } from "next";
 import Theme from "@/theme";
 import { inter } from "@/fonts/google";
+import { Analytics } from "@vercel/analytics/react";
 
 type Props = {
   children: ReactNode;
@@ -20,6 +21,7 @@ const RootLayout = (props: Props) => {
       <body className={inter?.className}>
         <script async src="https://kit.fontawesome.com/f2d307713b.js"></script>
         {children}
+        <Analytics />
         <Theme.setup />
       </body>
     </html>
