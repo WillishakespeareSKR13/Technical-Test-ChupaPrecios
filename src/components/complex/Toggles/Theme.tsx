@@ -4,7 +4,7 @@ import AtomButton from "../../atoms/AtomButton";
 import AtomIcon from "@/components/atoms/AtomIcon";
 
 const ToggleTheme = () => {
-  const [key] = theme.use();
+  const [key] = theme?.use?.() ?? [];
   return (
     <AtomButton
       astype="solid"
